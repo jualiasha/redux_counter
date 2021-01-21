@@ -1,16 +1,24 @@
 body {
-  background: linear-gradient(to right top, #0e1b2f, #0c1f33, #092337, #06273a, #032b3d) no-repeat center center/cover;
-height: 100vh;
-color:white;
-display: flex;
-align-items: center;
-justify-content: center;
+  background: linear-gradient(
+      to right top,
+      #0e1b2f,
+      #0c1f33,
+      #092337,
+      #06273a,
+      #032b3d
+    )
+    no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .counter_text {
   font-size: 2em;
   text-align: center;
-  margin:2em;
+  margin: 2em;
 }
 
 button {

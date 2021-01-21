@@ -1,33 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import * as actionType from "../actions/actions";
 
 class Counter extends Component {
-    state = {
-        counter:0
-    }
-
-    addHandler = () => {
-        this.setState({ counter: this.state.counter + 1 });
-      };
-
-    removeHandler = () => {
-        if (this.state.counter > 0)
-        {this.setState({ counter: this.state.counter - 1 })} 
-      };
-
-    resetHandler = () => {
-        this.setState({ counter: 0 });
-      };
-      
-    render() {
-        return (
-            <div>
-                <div className="counter_text">Your score: {this.state.counter}</div>
-                <button onClick={this.addHandler}>Increase one</button>
-                <button onClick={this.removeHandler}>Decrease one</button>
-                <button onClick={this.resetHandler}>Reset</button>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <div className="counter_text">Your score: {this.props.ctr}</div>
+        <button onClick={this.props.onIncCounter}>Increase one</button>
+        <button onClick={this.props.onDecCounter}>Decrease one</button>
+        <button onClick={this.props.resetCounter}>Reset</button>
+      </div>
+    );
+  }
 }
 
-export default Counter;
+const mapStateToProps = (state) => {
+  return {
+    ctr: state.counter,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onIncCounter: () => dispatch({ type: actionType.INCREMENT }),
+    onDecCounter: () => dispatch({ type: actionType.DECREMENT }),
+    resetCounter: () => dispatch({ type: actionType.RESET }),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
