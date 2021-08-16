@@ -14,8 +14,10 @@ const reducer = (state = initialState, action) => {
         ...state,
         counter: 0,
       };
+    default:
+     return state; 
   }
-  return state;
+  
 };
 
 const initialState = {
