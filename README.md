@@ -1,3 +1,6 @@
+[![NodeCI](https://github.com/jualiasha/redux_counter/workflows/Node%20CI/badge.svg)](https://github.com/jualiasha/redux_counter/actions)
+
+
 1. Prepare a base Counter
 
 As you know... Redux is store, reducer and actions. So let's set up a store first
