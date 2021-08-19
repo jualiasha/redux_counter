@@ -1,4 +1,4 @@
-[[![CI-counter](https://github.com/jualiasha/redux_counter/actions/workflows/main.yml/badge.svg)](https://github.com/jualiasha/redux_counter/actions/workflows/main.yml)](https://github.com/jualiasha/redux_counter/actions)
+[![CI-counter](https://github.com/jualiasha/redux_counter/actions/workflows/main.yml/badge.svg)](https://github.com/jualiasha/redux_counter/actions/workflows/main.yml)](https://github.com/jualiasha/redux_counter/actions)
 
 
 1. Prepare a base Counter
